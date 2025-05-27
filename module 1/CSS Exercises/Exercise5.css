@@ -1,0 +1,60 @@
+/* ============================================ */
+/*        Body and Base Font Styling            */
+/* ============================================ */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* ============================================ */
+/*        Main Header Styling (Fancy)           */
+/* ============================================ */
+#mainHeader {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  text-align: center;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff3366;
+}
+
+/* ============================================ */
+/*        Section Headers (h2)                  */
+/* ============================================ */
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-align: left;
+  background: linear-gradient(90deg, #003366, #0099cc);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ============================================ */
+/*        Descriptive Text (p, h3)              */
+/* ============================================ */
+h3, p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  color: #333;
+}
+
+/* ============================================ */
+/*        Banner Message Text                   */
+/* ============================================ */
+.highlight {
+  font-style: italic;
+  font-weight: 700;
+  color: darkgreen;
+  font-size: 1.1em;
+}

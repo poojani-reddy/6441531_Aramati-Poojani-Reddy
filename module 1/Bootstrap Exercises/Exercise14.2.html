@@ -1,0 +1,31 @@
+<!-- Exercise 14.2: Responsive Sidebar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Sidebar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .sidebar {
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 d-none d-md-block bg-dark text-white sidebar p-3">
+        <h5>Sidebar</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="#" class="nav-link text-white">Dashboard</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">Reports</a></li>
+        </ul>
+      </div>
+      <div class="col-md-9 col-12 p-4">
+        <h1>Main Content</h1>
+        <p>This area is always visible. The sidebar appears only on tablets and larger screens.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

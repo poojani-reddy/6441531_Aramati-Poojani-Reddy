@@ -1,0 +1,64 @@
+/* ============================================ */
+/* 1. Body Background – Image + Fallback Color  */
+/* ============================================ */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #e6f2ff; /* Fallback color */
+  background-image: url('https://images.unsplash.com/photo-1517519014922-bc3fda5c1f9e?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgba(0, 0, 0, 0.8); /* Slightly transparent text */
+}
+
+/* ============================================ */
+/* 2. Section Headers – Linear Gradient         */
+/* ============================================ */
+h2 {
+  font-size: 26px;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #003366, #0099cc); /* Gradient */
+  border-radius: 5px;
+}
+
+/* ============================================ */
+/* 3. Event Card Styling with HEX Background    */
+/* ============================================ */
+.eventCard {
+  background-color: #ffffff; /* HEX */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* RGBA shadow */
+}
+
+/* ============================================ */
+/* 4. Banner Header Text                        */
+/* ============================================ */
+#mainHeader {
+  text-align: center;
+  font-size: 36px;
+  color: #ff3366; /* HEX */
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.3); /* RGBA */
+}
+
+/* ============================================ */
+/* 5. Navigation Link Colors                    */
+/* ============================================ */
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #0066cc; /* HEX */
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: rgba(255, 255, 255, 0.8); /* RGBA */
+  background-color: rgba(0, 102, 204, 0.3); /* translucent hover */
+  padding: 5px;
+  border-radius: 5px;
+}

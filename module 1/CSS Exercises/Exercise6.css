@@ -1,0 +1,81 @@
+/* NAVIGATION - assuming nav links are inside <nav> with no ul/li yet, so first add nav as a list */
+
+nav {
+  /* make nav a flex container to align links horizontally */
+  display: flex;
+  gap: 20px; /* spacing between nav links */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* if nav was a ul */
+}
+
+/* If your nav was wrapped in ul/li, you'd style like this */
+/* Assuming nav currently uses just <a> tags without <ul>/<li> 
+   so list-style-type etc. won't apply. 
+   If you want bullet list styling, you'd need to wrap links in ul > li.
+*/
+
+/* Link styles with pseudo-classes */
+
+nav a:link {
+  color: darkblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:visited {
+  color: purple; /* visited link color */
+}
+
+nav a:hover {
+  color: orange; /* hover color */
+  text-decoration: underline;
+}
+
+nav a:active {
+  color: red; /* active/clicked color */
+  text-decoration: underline;
+}
+
+/* If you have any lists (e.g., ul or ol), style them as below */
+
+/* Example: For all lists in the page */
+ul, ol {
+  list-style-position: inside; /* bullets inside the content box */
+  margin-left: 0; /* remove default left margin */
+  padding-left: 20px; /* add padding for indent */
+}
+
+/* Example: For nav menus if you switch to ul > li structure and want to remove bullets */
+nav ul {
+  list-style-type: none; /* no bullets */
+  margin: 0;
+  padding: 0;
+  display: flex; /* horizontal layout */
+  gap: 15px;
+}
+
+nav ul li {
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+/* If your nav currently is only <a> tags inside <nav> (no ul/li), just add margin/padding */
+
+nav a {
+  padding: 5px 8px;
+  margin-right: 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f0f0f0; /* subtle highlight on hover */
+}
+
+/* For general lists (if you have any nav menus or other ul/li) */
+
+li {
+  margin: 8px 0;
+  padding: 4px 0;
+}

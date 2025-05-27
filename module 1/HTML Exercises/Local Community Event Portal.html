@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Community Event Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: darkblue;
+      font-weight: bold;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    #welcomeBanner {
+      background-color: lightblue;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .highlight {
+      font-size: 1.1em;
+      color: darkgreen;
+      font-style: italic;
+    }
+
+    .event-img {
+      border: 3px solid #ccc;
+      border-radius: 5px;
+    }
+
+    table {
+      margin-top: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea, button {
+      margin-top: 5px;
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    button {
+      background-color: darkblue;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: navy;
+    }
+
+    video {
+      margin-top: 20px;
+      border: 2px solid #333;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#register">Register</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#videoInvite">Video</a>
+    <a href="#preferences">Preferences</a>
+    <a href="#geolocation">Nearby Events</a>
+    <a href="help.html" target="_blank">Help</a>
+  </nav>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div id="welcomeBanner">
+        <h1>Welcome to the Community Event Portal</h1>
+        <p class="highlight">We’re glad to have you here!</p>
+        <p><span style="color: red; font-weight: bold;">Special Offer:</span> First 100 registrations get a free community T-shirt!</p>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <p>Check out exciting events happening in your area.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Reach out to the local council for any inquiries.</p>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery">
+      <h2>Community Event Gallery</h2>
+      <table>
+        <caption>Snapshots from Our Past Community Events</caption>
+        <tr>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1690991114897-7dc74a822372?q=80&w=2070&auto=format&fit=crop"
+                   width="300" height="200" alt="Music Night" title="Music Night Celebration" class="event-img">
+              <figcaption>Music Night</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1667137751727-55ed2c3eec0c?q=80&w=2074&auto=format&fit=crop"
+                   width="300" height="200" alt="Tree Plantation Drive" title="Green Mission" class="event-img">
+              <figcaption>Tree Plantation</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+                   width="300" height="200" alt="Food Festival" title="Tastes of the Town" class="event-img">
+              <figcaption>Food Festival</figcaption>
+            </figure>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?q=80&w=2070&auto=format&fit=crop"
+                   width="300" height="200" alt="Yoga Session" title="Healthy Living" class="event-img">
+              <figcaption>Yoga in the Park</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1723074832961-397744da2380?q=80&w=2070&auto=format&fit=crop"
+                   width="300" height="200" alt="Art Workshop" title="Creative Corner" class="event-img">
+              <figcaption>Art Workshop</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1708020463253-08cd5a33e305?q=80&w=2070&auto=format&fit=crop"
+                   width="300" height="200" alt="Cultural Parade" title="Unity in Diversity" class="event-img">
+              <figcaption>Cultural Parade</figcaption>
+            </figure>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register">
+      <h2>Register for an Event</h2>
+      <form id="eventForm" onsubmit="showConfirmation(); return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required autofocus>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" required>
+
+        <label for="eventType">Event Type:</label>
+        <select id="eventType" required>
+          <option value="">-- Select Event Type --</option>
+          <option value="marathon">Community Marathon</option>
+          <option value="workshop">Workshop</option>
+          <option value="cleanup">Beach Cleanup</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" cols="40" placeholder="Any special requests or notes..."></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <output id="confirmation"></output>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+      <h2>Event Feedback Form</h2>
+      <form onsubmit="submitFeedback(); return false;">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" placeholder="10-digit number" onblur="validatePhone()" required>
+
+        <label for="eventTypeFeedback">Select Event:</label>
+        <select id="eventTypeFeedback" onchange="displayFee()" required>
+          <option value="">-- Select an Event --</option>
+          <option value="cleanup">Beach Cleanup</option>
+          <option value="marathon">Marathon</option>
+          <option value="workshop">Workshop</option>
+        </select>
+        <p id="feeInfo"></p>
+
+        <label for="feedbackText">Your Feedback:</label>
+        <textarea id="feedbackText" rows="4" cols="50" onkeyup="countChars()"></textarea>
+        <p>Character Count: <span id="charCount">0</span></p>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <output id="feedbackMsg"></output>
+      <h3>Double-click to Enlarge Image</h3>
+      <img src="https://images.unsplash.com/photo-1690991114897-7dc74a822372?q=80&w=2070&auto=format&fit=crop"
+           width="300" height="200" ondblclick="enlargeImage(this)" class="event-img">
+    </section>
+
+    <!-- Video Invite -->
+    <section id="videoInvite">
+      <h2>Watch Our Event Promo Video</h2>
+      <video width="640" height="360" controls oncanplay="showVideoReadyMessage()">
+        <source src="event-promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p id="videoMessage" style="font-weight: bold; color: green;"></p>
+    </section>
+
+    <!-- Preferences -->
+    <section id="preferences">
+      <h2>Your Event Preference</h2>
+      <label for="preferredEvent">Select your preferred event type:</label>
+      <select id="preferredEvent" onchange="savePreference()">
+        <option value="">-- Choose an event --</option>
+        <option value="marathon">Community Marathon</option>
+        <option value="workshop">AI Workshop</option>
+        <option value="cleanup">Beach Cleanup</option>
+      </select>
+      <p id="savedPrefMsg" style="margin-top: 10px;"></p>
+      <button onclick="clearPreferences()">Clear Preferences</button>
+    </section>
+
+    <!-- Geolocation -->
+    <section id="geolocation">
+      <h2>Find Nearby Events</h2>
+      <button onclick="findLocation()">Find Nearby Events</button>
+      <div id="locationResult" style="margin-top: 15px; font-weight: bold;"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Local Community. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showConfirmation() {
+      document.getElementById("confirmation").innerText = "Thank you for registering!";
+    }
+
+    function submitFeedback() {
+      document.getElementById("feedbackMsg").innerText = "Feedback submitted successfully!";
+    }
+
+    function validatePhone() {
+      const phone = document.getElementById("phone").value;
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+      }
+    }
+
+    function displayFee() {
+      const event = document.getElementById("eventTypeFeedback").value;
+      let fee = "";
+      if (event === "cleanup") fee = "No fee – Volunteer event.";
+      else if (event === "marathon") fee = "$20 registration fee.";
+      else if (event === "workshop") fee = "$10 participation fee.";
+      document.getElementById("feeInfo").innerText = fee;
+    }
+
+    function countChars() {
+      const count = document.getElementById("feedbackText").value.length;
+      document.getElementById("charCount").innerText = count;
+    }
+
+    function enlargeImage(img) {
+      img.style.width = "500px";
+      img.style.height = "auto";
+    }
+
+    function showVideoReadyMessage() {
+      document.getElementById("videoMessage").innerText = "Video ready to play!";
+    }
+
+    function savePreference() {
+      const selected = document.getElementById("preferredEvent").value;
+      if (selected) {
+        localStorage.setItem("preferredEvent", selected);
+        document.getElementById("savedPrefMsg").innerText = "Preference saved!";
+      }
+    }
+
+    function clearPreferences() {
+      localStorage.clear();
+      sessionStorage.clear();
+      document.getElementById("savedPrefMsg").innerText = "Preferences cleared!";
+    }
+
+    function findLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError, { enableHighAccuracy: true });
+      } else {
+        document.getElementById("locationResult").innerText = "Geolocation is not supported.";
+      }
+    }
+
+    function showPosition(position) {
+      document.getElementById("locationResult").innerText =
+        `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+    }
+
+    function showError(error) {
+      let message = "Unable to retrieve your location.";
+      if (error.code === error.PERMISSION_DENIED) message = "Location access denied.";
+      else if (error.code === error.TIMEOUT) message = "Request timed out.";
+      document.getElementById("locationResult").innerText = message;
+    }
+
+    // On load: restore preferences
+    window.onload = () => {
+      const pref = localStorage.getItem("preferredEvent");
+      if (pref) document.getElementById("preferredEvent").value = pref;
+    };
+  </script>
+</body>
+</html>

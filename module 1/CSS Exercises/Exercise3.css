@@ -1,0 +1,49 @@
+/* ============================================ */
+/* 1. Universal Selector – Reset spacing        */
+/* ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================ */
+/* 2. Element Selector – Style all <h2>         */
+/* ============================================ */
+h2 {
+  font-size: 26px;
+  color: #003366;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* ============================================ */
+/* 3. ID Selector – Banner Title Header         */
+/* ============================================ */
+#mainHeader {
+  text-align: center;
+  font-size: 36px;
+  color: #ff3333;
+}
+
+/* ============================================ */
+/* 4. Class Selector – Event Card Container     */
+/* ============================================ */
+.eventCard {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================ */
+/* 5. Grouping Selector – Shared h3 and p Style */
+/* ============================================ */
+h3, p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}

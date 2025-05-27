@@ -1,0 +1,53 @@
+/* ============================================ */
+/*              Global Page Styles              */
+/* ============================================ */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f0f8ff;
+}
+
+/* ============================================ */
+/*             Navigation Bar Styles            */
+/* ============================================ */
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+}
+
+/* ============================================ */
+/*            Welcome Banner Styling            */
+/* ============================================ */
+#welcomeBanner {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* ============================================ */
+/*      Highlighted Text (e.g., greetings)      */
+/* ============================================ */
+.highlight {
+  font-size: 1.1em;
+  color: darkgreen;
+  font-style: italic;
+}
+
+/* ============================================ */
+/*        Style for Call-To-Action Button       */
+/* ============================================ */
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}

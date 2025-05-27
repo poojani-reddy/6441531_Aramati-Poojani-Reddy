@@ -1,0 +1,15 @@
+<section id="preferences">
+  <h2>Your Event Preference</h2>
+
+  <label for="preferredEvent">Select your preferred event type:</label>
+  <select id="preferredEvent" onchange="savePreference()">
+    <option value="">-- Choose an event --</option>
+    <option value="marathon">Community Marathon</option>
+    <option value="workshop">AI Workshop</option>
+    <option value="cleanup">Beach Cleanup</option>
+  </select>
+
+  <p id="savedPrefMsg" style="margin-top: 10px; font-weight: bold; color: green;"></p>
+
+  <button onclick="clearPreferences()">Clear Preferences</button>
+</section>

@@ -1,0 +1,34 @@
+/* --- Event Card Box Model Styling --- */
+.eventCard {
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+/* --- Form Field Outline on Focus --- */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #0073e6;
+  outline-offset: 2px;
+  box-shadow: 0 0 5px #0073e6;
+}
+
+/* --- Visibility vs Display Demo --- */
+.hiddenExample {
+  visibility: hidden; /* Invisible but space reserved */
+  background-color: #ffcccb;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #f44336;
+}
+
+.noneExample {
+  display: none; /* Completely removed from layout */
+  background-color: #cce5ff;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #2196F3;
+}

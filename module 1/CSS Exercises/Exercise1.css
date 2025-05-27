@@ -1,0 +1,35 @@
+/* ============================= */
+/*          Global Styles        */
+/* ============================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* ============================= */
+/*         Navigation Links      */
+/* ============================= */
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+}
+
+/* ============================= */
+/*         Welcome Banner        */
+/* ============================= */
+#welcomeBanner {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* ============================= */
+/*         Highlight Text        */
+/* ============================= */
+.highlight {
+  font-size: 1.1em;
+  color: darkgreen;
+  font-style: italic;
+}
