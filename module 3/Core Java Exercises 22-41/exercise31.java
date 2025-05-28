@@ -1,24 +1,40 @@
 //Basic JDBC Connection
+/* CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    age INT
+);
+
+INSERT INTO students (name, email, age) VALUES 
+('Alice', 'alice@example.com', 20),
+('Bob', 'bob@example.com', 22);
+*/
 import java.sql.*;
-
-public class DBConnectionExample {
+public class MySQLJDBCExample {
     public static void main(String[] args) {
-        String url = "jdbc:sqlite:school.db";
-
-        try (Connection connection = DriverManager.getConnection(url);
-             Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery("SELECT * FROM learners")) {
-
-            System.out.println("Learner List:");
-            while (resultSet.next()) {
-                int learnerId = resultSet.getInt("learner_id");
-                String fullName = resultSet.getString("full_name");
-                System.out.println(learnerId + " - " + fullName);
+        String url = "jdbc:mysql://localhost:3306/your_database";
+        String username = "your_username";
+        String password = "your_password";
+        try {
+            // Load MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            // Connect to database
+            Connection conn = DriverManager.getConnection(url, username, password);
+            // Execute SELECT query
+            String query = "SELECT * FROM students";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                System.out.println("ID: " + rs.getInt("id"));
+                System.out.println("Name: " + rs.getString("name"));
+                System.out.println("Email: " + rs.getString("email"));
+                System.out.println("Age: " + rs.getInt("age"));
+                System.out.println("------------------------");
             }
-
-        } catch (SQLException ex) {
-            System.out.println("Connection or query failed.");
-            ex.printStackTrace();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
