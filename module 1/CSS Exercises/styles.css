@@ -1,0 +1,167 @@
+/* styles.css */
+
+/* ===== Base Reset and Body ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f9f9f9 url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background-color: #e0e0ff;
+  padding: 10px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+}
+
+nav a:link,
+nav a:visited {
+  color: darkblue;
+}
+
+nav a:hover,
+nav a:active {
+  color: navy;
+  text-decoration: underline;
+}
+
+/* ===== Welcome Banner ===== */
+#welcomeBanner {
+  background-color: rgba(173, 216, 230, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.highlight {
+  font-size: 1.1em;
+  color: darkgreen;
+  font-style: italic;
+}
+
+.offer {
+  color: red;
+  font-weight: bold;
+}
+
+/* ===== Section Headers ===== */
+section h2 {
+  background: linear-gradient(to right, #add8e6, #ffffff);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ===== Event Images & Gallery ===== */
+.event-img {
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.event-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Form Styling ===== */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+select,
+textarea,
+button {
+  margin-top: 5px;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #007BFF;
+}
+
+button {
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: navy;
+}
+
+/* ===== Table Styling ===== */
+table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* ===== Multi-column Text Example ===== */
+.bulletin {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid gray;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a {
+    margin-bottom: 10px;
+  }
+
+  .event-img {
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
