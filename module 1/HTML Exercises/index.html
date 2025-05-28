@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#register">Register</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#videoInvite">Video</a>
+    <a href="#preferences">Preferences</a>
+    <a href="#geolocation">Nearby Events</a>
+    <a href="help.html" target="_blank">Help</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <div id="welcomeBanner">
+        <h1 style="color: red">Welcome to the Community Event Portal</h1>
+        <p class="highlight">We’re glad to have you here!</p>
+        <p><span class="offer">Special Offer:</span> First 100 registrations get a free community T-shirt!</p>
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <p>Check out exciting events happening in your area.</p>
+      <div id="eventList"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Reach out to the local council for any inquiries.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Community Event Gallery</h2>
+      <table>
+        <caption>Snapshots from Our Past Community Events</caption>
+        <tr>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1690991114897-7dc74a822372?q=80&w=2070&auto=format&fit=crop"
+                   width="300" height="200" alt="Music Night" title="Music Night Celebration" class="event-img">
+              <figcaption>Music Night</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1667137751727-55ed2c3eec0c?q=80&w=2074&auto=format&fit=crop"
+                   width="300" height="200" alt="Tree Plantation Drive" title="Green Mission" class="event-img">
+              <figcaption>Tree Plantation</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+                   width="300" height="200" alt="Food Festival" title="Tastes of the Town" class="event-img">
+              <figcaption>Food Festival</figcaption>
+            </figure>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?q=80&w=2070&auto=format&fit=crop"
+                   width="300" height="200" alt="Yoga Session" title="Healthy Living" class="event-img">
+              <figcaption>Yoga in the Park</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1723074832961-397744da2380?q=80&w=2070&auto=format&fit=crop"
+                   width="300" height="200" alt="Art Workshop" title="Creative Corner" class="event-img">
+              <figcaption>Art Workshop</figcaption>
+            </figure>
+          </td>
+          <td>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1708020463253-08cd5a33e305?q=80&w=2070&auto=format&fit=crop"
+                   width="300" height="200" alt="Cultural Parade" title="Unity in Diversity" class="event-img">
+              <figcaption>Cultural Parade</figcaption>
+            </figure>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="register">
+      <h2>Register for an Event</h2>
+      <form id="eventForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required autofocus />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="eventDate">Event Date:</label>
+        <input type="date" id="eventDate" name="eventDate" required />
+
+        <label for="eventType">Event Type:</label>
+        <select id="eventType" name="eventType" required>
+          <option value="">-- Select Event Type --</option>
+          <option value="marathon">Community Marathon</option>
+          <option value="workshop">Workshop</option>
+          <option value="cleanup">Beach Cleanup</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Any special requests or notes..."></textarea>
+
+        <button type="submit" id="registerBtn">Submit</button>
+      </form>
+      <output id="confirmation"></output>
+    </section>
+
+    <section id="feedback">
+      <h2>Event Feedback Form</h2>
+      <form id="feedbackForm">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" placeholder="10-digit number" required />
+
+        <label for="eventTypeFeedback">Select Event:</label>
+        <select id="eventTypeFeedback" required>
+          <option value="">-- Select an Event --</option>
+          <option value="cleanup">Beach Cleanup</option>
+          <option value="marathon">Marathon</option>
+          <option value="workshop">Workshop</option>
+        </select>
+        <p id="feeInfo"></p>
+
+        <label for="feedbackText">Your Feedback:</label>
+        <textarea id="feedbackText" rows="4" onkeyup="countChars()"></textarea>
+        <p>Character Count: <span id="charCount">0</span></p>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <output id="feedbackMsg"></output>
+    </section>
+
+    <section id="videoInvite">
+      <h2>Watch Our Event Promo Video</h2>
+      <video width="640" height="360" controls oncanplay="showVideoReadyMessage()">
+        <source src="event-promo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p id="videoMessage"></p>
+    </section>
+
+    <section id="preferences">
+      <h2>Your Event Preference</h2>
+      <label for="preferredEvent">Select your preferred event type:</label>
+      <select id="preferredEvent" onchange="savePreference()">
+        <option value="">-- Choose an event --</option>
+        <option value="marathon">Community Marathon</option>
+        <option value="workshop">AI Workshop</option>
+        <option value="cleanup">Beach Cleanup</option>
+      </select>
+      <p id="savedPrefMsg"></p>
+      <button onclick="clearPreferences()">Clear Preferences</button>
+    </section>
+
+    <section id="geolocation">
+      <h2>Find Nearby Events</h2>
+      <button onclick="findLocation()">Find Nearby Events</button>
+      <div id="locationResult"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Local Community. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
